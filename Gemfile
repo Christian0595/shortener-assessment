@@ -45,3 +45,14 @@ gem 'devise'
 gem 'devise-jwt', '~> 0.8.0'
 
 gem 'rack-cors'
+
+# Manage api json responses
+gem 'jsonapi-rails'
+
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'ffaker'
+  gem 'jsonapi-rspec'
+  gem 'shoulda-matchers', '~> 5.0'
+end
