@@ -2,7 +2,7 @@ class SessionsController < Devise::SessionsController
 
   private
   # Overwriting devise methods
-  
+
   def respond_with(resource, _opts = {})
     json_response(resource)
   end

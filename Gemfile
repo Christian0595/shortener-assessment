@@ -56,3 +56,4 @@ group :test do
   gem 'jsonapi-rspec'
   gem 'shoulda-matchers', '~> 5.0'
 end
+  
