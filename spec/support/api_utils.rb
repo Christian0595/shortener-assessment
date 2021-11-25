@@ -8,11 +8,11 @@ module ApiUtils
 	end
 
 	# Log user into app
-	def log_in(user)
-		post '/api/login', params: {
+	def log_in(user, wrong_password = nil)
+		post '/api/sign_in', params: {
       user: {
         email: user.email,
-        password: user.password
+        password: wrong_password || user.password
       }
     }
 	end
