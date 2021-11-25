@@ -56,4 +56,6 @@ group :test do
   gem 'jsonapi-rspec'
   gem 'shoulda-matchers', '~> 5.0'
 end
-  
+
+# UserAgentParser is a simple, comprehensive Ruby gem for parsing user agent strings. 
+gem 'user_agent_parser'
