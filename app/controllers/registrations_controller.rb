@@ -1,4 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
+  skip_before_action :authenticate_user!, only: [:create]
+  
   # Saves user and sign_up after
   def create
     build_resource(sign_up_params)

@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/jsonapi-rb/jsonapi-rails
+  revision: 163f371fd99dc1d9efa1720b190f94c4b21a2cee
+  specs:
+    jsonapi-rails (0.4.1)
+      jsonapi-parser (~> 0.1.0)
+      jsonapi-rb (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -101,9 +109,6 @@ GEM
       concurrent-ruby (~> 1.0)
     jsonapi-deserializable (0.2.0)
     jsonapi-parser (0.1.1)
-    jsonapi-rails (0.4.0)
-      jsonapi-parser (~> 0.1.0)
-      jsonapi-rb (~> 0.5.0)
     jsonapi-rb (0.5.0)
       jsonapi-deserializable (~> 0.2.0)
       jsonapi-serializable (~> 0.3.0)
@@ -226,7 +231,7 @@ DEPENDENCIES
   devise-jwt (~> 0.8.0)
   factory_bot_rails
   ffaker
-  jsonapi-rails
+  jsonapi-rails!
   jsonapi-rspec
   listen (~> 3.3)
   pg (~> 1.1)

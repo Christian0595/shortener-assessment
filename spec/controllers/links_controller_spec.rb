@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe  Api::LinksController, type: :request do
+describe  LinksController, type: :request do
   # Create users with 10 links each
   let! (:user) { create(:user_with_links) }
   let! (:second_user) { create(:user_with_links, links_count: 5) }
@@ -9,7 +9,7 @@ describe  Api::LinksController, type: :request do
     describe "index" do
       before do
         log_in(user)
-        get '/api/links', headers: {'Authorization' => response.headers['Authorization']}
+        get '/links', headers: {'Authorization' => response.headers['Authorization']}
       end
   
       it 'shows success status' do
@@ -26,7 +26,7 @@ describe  Api::LinksController, type: :request do
         log_in(user)
         @link = user.links.first
         @link_visits_count = @link.visits.count
-        get "/api/links/#{@link.code}", headers: {'Authorization' => response.headers['Authorization']}
+        get "/#{@link.code}", headers: {'Authorization' => response.headers['Authorization']}
       end
   
       it 'returns redirect status' do
@@ -50,7 +50,7 @@ describe  Api::LinksController, type: :request do
 
   context 'when user is not logged in' do
     before do
-      get '/api/links'
+      get '/links'
     end
 
     it 'shows unauthorized status' do
