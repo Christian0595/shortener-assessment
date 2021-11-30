@@ -21,7 +21,7 @@ Things you may want to cover:
 
   First configure database access on config/database.yml
   
-  create databse with: rake db:create
+  create database with: rake db:create
 
 * Database initialization
 
