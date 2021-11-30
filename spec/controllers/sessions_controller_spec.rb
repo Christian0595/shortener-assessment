@@ -54,7 +54,7 @@ describe SessionsController, type: :request do
 
   describe 'logging out' do
     it 'returns 204' do
-      delete '/api/sign_out'
+      delete '/sign_out'
 
       expect(response).to have_http_status(204)
     end

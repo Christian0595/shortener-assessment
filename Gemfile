@@ -47,7 +47,7 @@ gem 'devise-jwt', '~> 0.8.0'
 gem 'rack-cors'
 
 # Manage api json responses
-gem 'jsonapi-rails'
+gem 'jsonapi-rails', git: 'https://github.com/jsonapi-rb/jsonapi-rails'
 
 group :test do
   gem 'rspec-rails'

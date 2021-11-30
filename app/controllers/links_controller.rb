@@ -1,6 +1,7 @@
-class Api::LinksController < Api::BaseController
-  before_action :find_url_by_code, only: [:show, :update, :destroy]
+class LinksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
+  before_action :find_url_by_code, only: [:show, :update, :destroy]
+
   # Gets current user from devise and return his links
   def index
     render jsonapi: current_user.links
