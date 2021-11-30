@@ -4,7 +4,7 @@ class Link < ApplicationRecord
   validates_presence_of :url
   validates_uniqueness_of :code
 
-  before_validation :generate_short_url
+  before_validation :generate_short_url, on: :create
   
   def generate_short_url
     self.code = random_code

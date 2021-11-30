@@ -59,3 +59,5 @@ end
 
 # UserAgentParser is a simple, comprehensive Ruby gem for parsing user agent strings. 
 gem 'user_agent_parser'
+
+gem 'dotenv-rails', groups: [:development, :test]
