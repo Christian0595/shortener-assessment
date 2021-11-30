@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   # We create a scope and defaults format: :json
   # so that in case of an unauthorized request it does not redirect but sends 401
   scope '/', defaults: { format: :json } do
