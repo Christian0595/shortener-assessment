@@ -61,3 +61,5 @@ end
 gem 'user_agent_parser'
 
 gem 'dotenv-rails', groups: [:development, :test]
+
+gem 'rswag'

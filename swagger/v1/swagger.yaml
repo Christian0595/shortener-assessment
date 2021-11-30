@@ -1,0 +1,124 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/links":
+    get:
+      summary: list links
+      tags:
+      - Links
+      parameters:
+      - name: authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: user registered
+    post:
+      summary: create link
+      responses:
+        '200':
+          description: successful
+  "/links/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    patch:
+      summary: update link
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update link
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete link
+      responses:
+        '200':
+          description: successful
+  "/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show link
+      responses:
+        '200':
+          description: successful
+  "/registration":
+    post:
+      summary: new registration
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '200':
+          description: user registered
+        '400':
+          description: bad request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                      default: default@email.com
+                    password:
+                      type: string
+                      default: '12345678'
+              required:
+              - email
+              - password
+  "/sign_in":
+    post:
+      summary: log in
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '200':
+          description: user logged
+        '400':
+          description: bad request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                      default: default@email.com
+                    password:
+                      type: string
+                      default: '12345678'
+              required:
+              - email
+              - password
+servers:
+- url: http://localhost:3000
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000/
